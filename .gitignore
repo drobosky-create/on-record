@@ -1,0 +1,17 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# InDesign / Adobe working files
+*.idlk
+*~lock*
+InDesign Recovery/
+
+# Large binaries better stored via Git LFS (see .gitattributes)
+# *.pdf
+# *.indd
+
+# Node (for future WEBSITE / APP work)
+node_modules/
+dist/
+.env
