@@ -2,26 +2,18 @@
 
 The identity is expressed through discipline, not decoration.
 
-## Typography
-One typeface. No pairing gymnastics. No display fonts. If a font feels "designed," reject it.
-
-Acceptable candidates (choose one):
-- Minion Pro
-- Source Serif
-- IBM Plex Serif
-- Inter
-- Helvetica Now (only if used with restraint)
+## Typography (decided)
+**One typeface: IBM Plex Sans** — a neutral grotesque with an administrative, document register. Fallback for print-licensing: **Inter**. No pairing, no display faces. If a font feels "designed," reject it.
 
 ## Cover
-- Matte black or charcoal
-- No gloss
-- **Title: embossed silver** (blind deboss + silver foil / metallic silver on the title only)
-- No imagery, no decorative embossing beyond the title treatment
+- Construction: cloth (buckram) case or heavy uncoated / duplexed board. **No matte film lamination.**
+- Black or charcoal. No gloss, no imagery.
+- **Title: silver foil stamp** (optionally with a registered emboss). No other foil, no decorative deboss.
 
 ## Interior discipline
 - No decorative elements
-- No page numbers except the Day count
+- No page numbers except the Day count (and Week count on weekly pages)
 - Master-page-driven repetition (Daily and Weekly)
 - Paragraph styles only — no local overrides
 
-See [`../CONTENT/identity-standard.md`](../CONTENT/identity-standard.md) for the in-book Identity Standard page.
+See [`../CONTENT/identity-standard.md`](../CONTENT/identity-standard.md) for the in-book Identity Standard page, and [`../RECORD/design-brief.md`](../RECORD/design-brief.md) for the full production brief.
