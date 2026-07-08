@@ -1,6 +1,16 @@
 # Decision Log
 
-A permanent record of the decisions behind The Record. Newest first.
+A permanent record of the decisions behind On Record. Newest first.
+
+## v0.3 — On Record house + editions
+
+- **House renamed to "On Record."** Neutral parent so the editions are peers. "Man on Record" is no longer the house — it is one edition. (Repo slug may follow; GitHub redirects old URLs.)
+- **Second individual edition: Woman on Record.** Mechanically identical to Man on Record — same paper, type, trim, binding, and page copy. Differentiated only by wordmark (and, optionally, a single restrained cloth colourway). Not softened, not recoloured, not re-voiced.
+- **Third artifact: The Common Record.** A couple's shared volume, sold as a paired set, unlocked only after both partners complete their individual 90-day runs. Co-signed pages (two signature lines throughout).
+- **Reveal is a sealed physical mechanic.** The final signature of each individual volume is bound-in but sealed ("DO NOT OPEN UNTIL DAY 90"); breaking it instructs the exchange. Irreversible by design.
+- **Consent model: surprise the ritual, not the obligation.** Paired-set volumes carry one added Identity Standard line ("this record may one day be witnessed…") so the 90 days stay honest; timing/form of the reveal remain a surprise; exchange is voluntary and mutual at the moment.
+- **Failure paths designed:** if only one finishes, The Common Record never unlocks and the other's record stays private; no punishment.
+- **Repo architecture:** shared spec stays at top level (must not diverge); edition-specific differences live under `EDITIONS/`.
 
 ## v0.2 — Concept, revised for production reality
 
