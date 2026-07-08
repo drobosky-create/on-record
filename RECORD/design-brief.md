@@ -41,7 +41,8 @@ Governing principle: **permanence changes behavior.** Every decision serves seri
 | Interior paper | 100–120 GSM uncoated, off-white / bone, with good ink holdout (must be write-tested — see §7). No pre-printed dot grid or ruling. |
 | Cover construction | **Cloth (buckram) case** preferred, or a heavy uncoated / duplexed board. **No matte film lamination** (it scuffs and fingerprints — wrong for an object about permanence). |
 | Cover colour | Black or charcoal. No gloss, no imagery. |
-| Cover title | **Silver foil stamp** on the title only, optionally combined with a blind emboss (registered foil-emboss). No other foil, no decorative deboss. |
+| Cover wordmark | Reads **"Man on Record"** — the brand/house name, not the product name ("The Record"). This is the only text on the cover. |
+| Cover title finish | **Silver foil stamp** on the wordmark only, optionally combined with a blind emboss (registered foil-emboss). No subtitle, no other foil, no decorative deboss. |
 | Trim size | *Open decision — see §9. Recommendation: ~140 × 210 mm (A5-ish) or 5 × 7.75 in; hand-held, upright book proportion, never a wide planner.* |
 | Proof batch | 2–3 hand-bound proofs |
 | Seed run | ~50 units (see §9) |
@@ -227,6 +228,4 @@ Rules: the holder transfers "days kept" by hand — the book does not compute it
 - Do not introduce a second typeface or any display face.
 - Do not add page numbers/folios beyond the Day and Week counts.
 - Do not soften the copy or make it motivational.
-- Do not use gloss, matte film lamination, imagery, or any foil beyond the silver cover title.
-
-*If a decision isn't covered here, choose the more austere option — and raise it.*
+- Do not use
