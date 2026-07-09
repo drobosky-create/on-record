@@ -69,7 +69,10 @@ Build **one** `.indd` file. Sections in order:
 3. Initiation Sequence — Days 1–7 (fixed pages)
 4. Daily Page (master, ×90)
 5. Weekly Escalation Page (master, after every 7th daily)
-6. Carryover / Index (only if added later)
+6. Close-Out (final page, after Day 90)
+7. Carryover / Index (only if added later)
+
+*Note: this structure is the individual editions. The Common Record has its own order — Co-Initiation → Joint Standards → 45 Daily → Weekly → Close-Out — in `../EDITIONS/the-common-record/content.md`.*
 
 Rules:
 
@@ -189,6 +192,32 @@ Fields, in order:
 > **Signed** ______________
 
 Rules: the holder transfers "days kept" by hand — the book does not compute it. Escalation is required, not optional: a standard met becomes the floor, not the ceiling.
+
+---
+
+### 6.6 Close-Out *(final page, after Day 90)*
+
+> **CLOSE-OUT — DAY 90**
+>
+> Ninety days are counted. This is the accounting. Answer plainly.
+>
+> Days kept: ______ / 90
+>
+> The standard held:   YES ▢    NO ▢
+> *(one line — the truth of it)*
+> ______________________________________________
+>
+> What changed in you:
+> ______________________________________________
+>
+> What you carry into the next record:
+> ______________________________________________
+>
+> This record is now closed. It cannot be reopened, erased, or restarted.
+>
+> Signed ______________________   ____ / ____ / ______
+
+Rules: final recto page. YES/NO is the one permitted marked field (as with the daily KEPT/BROKEN). No page number. In a paired set, the sealed reveal signature is bound *after* this page.
 
 ---
 

@@ -21,7 +21,8 @@ One file, not multiple. Sections in order:
 3. Initiation Sequence (Days 1–7)
 4. Daily Page (master, ×90)
 5. Weekly Escalation Page (master)
-6. Carryover / Index (if added later)
+6. Close-Out (final page, after Day 90)
+7. Carryover / Index (if added later)
 
 Rules:
 - Master pages for Daily + Weekly
@@ -35,6 +36,7 @@ Rules:
 - Initiation pages included
 - Identity Standard + Non-Negotiable Standards included
 - 90 daily pages + weekly pages in correct order
+- Close-Out page included as the final page
 - No page numbers except Day/Week counts
 - No decorative elements added by a designer
 
