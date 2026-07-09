@@ -2,6 +2,13 @@
 
 A permanent record of the decisions behind On Record. Newest first.
 
+## v0.3.1 — Cover colourway system
+
+- **Editions are distinguished by a deliberate colour palette, not decoration.** Man on Record = **black** (~#111111); Woman on Record = **oxblood** (~#4A0E10); The Common Record = **dark maroon** (~#2E1214).
+- **Logic:** black and oxblood are a complementary pair; the shared book's dark maroon is the optical blend of the two — it visibly belongs to both.
+- **Why oxblood (not white/pastel) for Woman:** severe, corporeal, a classic ledger buckram — deliberately the opposite of a soft/gendered "women's" palette. Rejected pure white (durability, low silver-foil contrast, bridal read).
+- **Finish unchanged:** silver foil wordmark on cloth; no matte lamination. Hex values approximate — confirm against physical cloth swatches; draw-down test silver on each colour.
+
 ## v0.3 — On Record house + editions
 
 - **House renamed to "On Record."** Neutral parent so the editions are peers. "Man on Record" is no longer the house — it is one edition. (Repo slug may follow; GitHub redirects old URLs.)
