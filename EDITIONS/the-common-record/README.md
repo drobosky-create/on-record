@@ -1,5 +1,7 @@
 # The Common Record — Edition
 
+> **Design brief:** [`design-brief.md`](design-brief.md) — the complete, self-contained handoff for this edition (everything a designer needs, in one file).
+
 A couple's shared volume — a **45-day** co-authored run. Two people each keep their own 90-day record alone. When **both** have completed, a sealed section reveals the final act: they exchange and read each other's records, complete a shared Co-Initiation, then keep a 45-day record together.
 
 The individual books are private discipline. The Common Record is the reckoning that follows.
