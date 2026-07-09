@@ -6,9 +6,11 @@
 
 The shared instrument ships in editions:
 
-- **[Man on Record](EDITIONS/man-on-record/)** — the 90-day individual edition.
-- **[Woman on Record](EDITIONS/woman-on-record/)** — the 90-day individual edition, mechanically identical.
-- **[The Common Record](EDITIONS/the-common-record/)** — a couple's shared volume, unlocked only after both partners complete their individual 90-day runs.
+- **[Man on Record](EDITIONS/man-on-record/)** — the 90-day individual edition. Black cloth.
+- **[Woman on Record](EDITIONS/woman-on-record/)** — the 90-day individual edition, mechanically identical. Oxblood cloth.
+- **[The Common Record](EDITIONS/the-common-record/)** — a 45-day co-authored couple's volume, unlocked only after both partners complete their individual 90-day runs. Dark maroon cloth (black + oxblood, bled together).
+
+Every edition follows one arc: **open** (Identity Standard, or the couple's Co-Initiation) → **keep** (co-/signed daily and weekly pages) → **close** (a final Close-Out that formally shuts the record). Covers carry a silver-foil wordmark only; the colour palette is a deliberate system, not decoration.
 
 The Record was Version 1. The house is the platform.
 
@@ -33,4 +35,4 @@ Every meaningful change is intentional, documented, and permanent — the same d
 
 ## Status
 
-`v0.3 — Concept`. On Record house established; three editions defined; production spec at v0.2 (90-day, genuine lay-flat, cloth + silver foil). See [`ROADMAP.md`](ROADMAP.md).
+`v0.3.3 — Concept`. On Record house established; three editions defined with cover palette (black / oxblood / dark maroon); Common Record set to 45 days with co-initiation; Close-Out added to every edition. Production spec at v0.2 (90-day individual runs, genuine lay-flat, cloth + silver foil). See [`decision-log.md`](decision-log.md) and [`ROADMAP.md`](ROADMAP.md).
