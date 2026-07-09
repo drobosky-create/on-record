@@ -2,6 +2,13 @@
 
 A permanent record of the decisions behind On Record. Newest first.
 
+## v0.3.2 — The Common Record structure
+
+- **Length set to 45 days** (shorter, more intense than the 90-day individual runs; a couple can buy another).
+- **Co-Initiation added**, replacing the solo Initiation: three acts done together before Day 1 — *The Exchange* (read each other's records), *Acknowledgment*, *The Joint Declaration*.
+- **Acknowledgment page added** (the "trace"): two mirrored panels where each partner writes, in their own hand, what they read in the other's record, what they will carry, and what they now ask — co-signed. Makes the witnessed moment part of the permanent object.
+- Daily/Weekly unchanged in form (two signatures, never one); Day count now reads "/ 45".
+
 ## v0.3.1 — Cover colourway system
 
 - **Editions are distinguished by a deliberate colour palette, not decoration.** Man on Record = **black** (~#111111); Woman on Record = **oxblood** (~#4A0E10); The Common Record = **dark maroon** (~#2E1214).
