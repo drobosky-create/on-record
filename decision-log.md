@@ -2,6 +2,13 @@
 
 A permanent record of the decisions behind On Record. Newest first.
 
+## v0.3.3 — Close-Out added to every edition
+
+- **Every book now ends with a Close-Out page** that formally closes the record: a final accounting with days kept, a binary YES/NO verdict on whether the standard held, what changed, and what carries forward. Declares the record closed — it cannot be reopened, erased, or restarted.
+- **Individual editions:** shared Close-Out at Day 90 (in `CONTENT/close-out.md`; identical for Man and Woman). In a paired set, the sealed reveal signature is bound after it.
+- **The Common Record:** co-signed Close-Out at Day 45 (two signatures).
+- Reinforces the finite, permanent, non-refillable premise — and the buy-the-next-edition cadence.
+
 ## v0.3.2 — The Common Record structure
 
 - **Length set to 45 days** (shorter, more intense than the 90-day individual runs; a couple can buy another).
