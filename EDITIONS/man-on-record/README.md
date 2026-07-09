@@ -4,6 +4,6 @@ Individual 90-day edition. All content, spec, and construction are the shared ho
 
 ## Cover
 - **Wordmark:** "Man on Record" — silver foil stamp, per [`../../RECORD/Covers/cover-spec.md`](../../RECORD/Covers/cover-spec.md).
-- **Colourway:** charcoal cloth (house default).
+- **Colourway:** **black cloth** (~#111111). The dark anchor of the palette system.
 
 Nothing else about this edition differs from the shared instrument.
