@@ -1,9 +1,11 @@
 # Woman on Record — Edition
 
-Individual 90-day edition, **mechanically identical** to Man on Record — same paper, typography, trim, binding, and page copy. Do not soften, recolour, or re-voice it; the severity is not gendered and sameness is the feature.
+Individual 90-day edition, **mechanically identical** to Man on Record — same paper, typography, trim, binding, and page copy. Do not soften, re-voice, or decorate it. The only difference is the cover colourway, and it is deliberately severe, not "feminine."
 
 ## Cover
-- **Wordmark:** "Woman on Record" — silver foil stamp, same lockup logic as the other edition.
-- **Colourway:** charcoal cloth (house default). If the two editions must be physically distinguishable, the only permitted distinction is a single restrained material variant (e.g., **bone cloth** instead of charcoal) — never a gendered palette, never pastels. Recommended default: identical charcoal, distinguished by the wordmark alone.
+- **Wordmark:** "Woman on Record" — silver foil stamp, same lockup logic as the other editions.
+- **Colourway:** **oxblood cloth** (deep blood-red, ~#4A0E10). A classic ledger/law-library buckram tone — corporeal and austere, the opposite of a soft/pastel "women's" palette. Silver foil reads cleanly on it.
+
+Rationale: the palette is a *system*, not decoration — black (Man) and oxblood (Woman) are a complementary pair that bleed together into the dark maroon of The Common Record. See [`../the-common-record/`](../the-common-record/).
 
 Nothing else about this edition differs from the shared instrument.
