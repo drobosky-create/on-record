@@ -40,8 +40,8 @@ Governing principle: **permanence changes behavior.** Every decision serves seri
 | **Not permitted** | Spiral, disc, ring, or any refillable/removable-page binding. The book must be permanent and closed-extent. |
 | Interior paper | 100–120 GSM uncoated, off-white / bone, with good ink holdout (must be write-tested — see §7). No pre-printed dot grid or ruling. |
 | Cover construction | **Cloth (buckram) case** preferred, or a heavy uncoated / duplexed board. **No matte film lamination** (it scuffs and fingerprints — wrong for an object about permanence). |
-| Cover colour | Black or charcoal. No gloss, no imagery. |
-| Cover wordmark | Reads **"Man on Record"** — the brand/house name, not the product name ("The Record"). This is the only text on the cover. |
+| Cover colour | **Edition-specific palette:** Man = black (~#111111), Woman = oxblood (~#4A0E10), The Common Record = dark maroon (~#2E1214, the two bled together). No gloss, no imagery. Confirm against cloth swatches. See `../EDITIONS/` and `Covers/cover-spec.md`. |
+| Cover wordmark | The house/product name per edition — "Man on Record", "Woman on Record", or "The Common Record" — set as the only text on the cover. (House name, not "The Record".) |
 | Cover title finish | **Silver foil stamp** on the wordmark only, optionally combined with a blind emboss (registered foil-emboss). No subtitle, no other foil, no decorative deboss. |
 | Trim size | *Open decision — see §9. Recommendation: ~140 × 210 mm (A5-ish) or 5 × 7.75 in; hand-held, upright book proportion, never a wide planner.* |
 | Proof batch | 2–3 hand-bound proofs |
