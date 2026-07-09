@@ -23,7 +23,8 @@ The surprise is the *ritual*, never the *obligation*. See [`consent.md`](consent
 - [`consent.md`](consent.md) — the added consent line and where it goes.
 
 ## Cover
-- **Wordmark:** "The Common Record" — silver foil, same house treatment. Colourway distinct from the individual volumes but equally austere (e.g., oxblood or deep green cloth); confirm at design.
+- **Wordmark:** "The Common Record" — silver foil, same house treatment.
+- **Colourway:** **dark maroon cloth** (~#2E1214) — the optical blend of Man's black and Woman's oxblood. The shared book is literally the two colours bled together: neither purely his nor hers. Reads near-black with an oxblood cast in the light.
 
 ## Packaging
 Paired box holding two individual volumes + the sealed Common Record, in the same austere, matte, dark register as the individual packaging. No gloss, no imagery. This is the premium / gift / marriage tier.
