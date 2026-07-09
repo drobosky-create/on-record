@@ -1,5 +1,7 @@
 # Man on Record — Edition
 
+> **Design brief:** [`design-brief.md`](design-brief.md) — the complete, self-contained handoff for this edition (everything a designer needs, in one file).
+
 Individual 90-day edition. All content, spec, and construction are the shared house standard — see the top-level [`CONTENT/`](../../CONTENT/), [`PRINT/`](../../PRINT/), and [`RECORD/design-brief.md`](../../RECORD/design-brief.md). Only the differences below.
 
 ## Cover
