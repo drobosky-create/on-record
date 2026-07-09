@@ -7,8 +7,8 @@ The identity is expressed through discipline, not decoration.
 
 ## Cover
 - Construction: cloth (buckram) case or heavy uncoated / duplexed board. **No matte film lamination.**
-- Black or charcoal. No gloss, no imagery.
-- **Title: silver foil stamp** (optionally with a registered emboss). No other foil, no decorative deboss.
+- **Title: silver foil stamp** (optionally with a registered emboss). No other foil, no decorative deboss. Wordmark only, no imagery.
+- **Colourway is a palette system across editions:** Man = black, Woman = oxblood, The Common Record = dark maroon (the two bled together). Austere and severe by intent, never soft or gendered. Details in [`../RECORD/Covers/cover-spec.md`](../RECORD/Covers/cover-spec.md).
 
 ## Interior discipline
 - No decorative elements
