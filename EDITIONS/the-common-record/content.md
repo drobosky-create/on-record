@@ -1,8 +1,8 @@
 # The Common Record — Page Content
 
-A **45-day** co-authored volume. Same typeface, paper, trim, and austerity as the individual books. The structural signature throughout: **two signatures, never one.** A day or week closed with a single signature is not closed. Set exactly as written.
+A **45-day** co-authored volume. Same typeface, paper, trim, and austerity as the individual books. The structural signature throughout: **two signatures, never one.** A day, week, or close closed with a single signature is not closed. Set exactly as written.
 
-Order: Co-Initiation → Joint Non-Negotiable Standards → 45 Daily Pages → a Weekly Escalation Page after every 7th daily (~6).
+Order: Co-Initiation → Joint Non-Negotiable Standards → 45 Daily Pages → a Weekly Escalation Page after every 7th daily (~6) → Close-Out.
 
 ---
 
@@ -103,4 +103,28 @@ Three fixed acts, completed in order — in one sitting or across the first days
 
 ---
 
-Rules: both partners sign every acknowledgment, declaration, daily, and weekly page — one signature never closes anything. Escalation is required. The dual signature deliberately rhymes with a vow: co-authored, co-owned, permanent.
+## Close-Out — master  *(final page, after Day 45; co-signed)*
+
+> **CLOSE-OUT — DAY 45**
+>
+> Forty-five days are counted, together. This is the accounting. Answer plainly.
+>
+> Days kept: ______ / 45
+>
+> We held:   YES ▢    NO ▢
+> *(one line — the truth of it)*
+> ______________________________________________
+>
+> What we became:
+> ______________________________________________
+>
+> What we carry forward:
+> ______________________________________________
+>
+> This record is now closed. It cannot be reopened, erased, or restarted.
+>
+> Signed ____________   Signed ____________   ____ / ____ / ______
+
+---
+
+Rules: both partners sign every acknowledgment, declaration, daily, weekly, and the close-out — one signature never closes anything. Escalation is required. The dual signature deliberately rhymes with a vow: co-authored, co-owned, permanent.

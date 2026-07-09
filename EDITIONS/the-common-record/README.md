@@ -15,6 +15,7 @@ The individual books are private discipline. The Common Record is the reckoning 
 2. **Joint Non-Negotiable Standards** — written together, both accountable.
 3. **45 Daily Pages** — co-signed; a day never closes with one signature.
 4. **Weekly Escalation** — after every 7th daily (~6 across the run), both sign.
+5. **Close-Out** — a final co-signed accounting at Day 45 that formally closes the record.
 
 Full copy in [`content.md`](content.md).
 
