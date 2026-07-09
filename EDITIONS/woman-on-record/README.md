@@ -1,5 +1,7 @@
 # Woman on Record — Edition
 
+> **Design brief:** [`design-brief.md`](design-brief.md) — the complete, self-contained handoff for this edition (everything a designer needs, in one file).
+
 Individual 90-day edition, **mechanically identical** to Man on Record — same paper, typography, trim, binding, and page copy. Do not soften, re-voice, or decorate it. The only difference is the cover colourway, and it is deliberately severe, not "feminine."
 
 ## Cover
