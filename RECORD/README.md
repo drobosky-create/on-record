@@ -5,6 +5,7 @@ Production files for The Record. Design in **Adobe InDesign** only — see [`../
 **Start here:** [`design-brief.md`](design-brief.md) — the complete, self-contained handoff for the designer/bindery (object spec, typography, file construction, exact page copy, proofing, open decisions).
 
 ## Folders
+- [`Design/`](Design/) — **Claude Design package** (standalone HTML: cover spec, editions, interior specs, interactive page-through model)
 - [`InDesign/`](InDesign/) — the single `.indd` source file (see structure below)
 - [`PDF/`](PDF/) — export-ready and proof PDFs
 - [`Fonts/`](Fonts/) — licensed font files used in the book
