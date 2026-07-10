@@ -2,6 +2,11 @@
 
 A permanent record of the decisions behind On Record. Newest first.
 
+## v0.3.4 — Design package received from Claude Design
+
+- **First visual design deliverables added** at `RECORD/Design/` — standalone HTML: Cover Spec, Editions, Interior Specs (layouts at 100%), and an interactive page-through model. Reflect the current spec (three editions, black/oxblood/dark-maroon palette, silver foil).
+- Read-only exports; the written spec (`RECORD/design-brief.md`, `CONTENT/`) remains source of truth if they diverge.
+
 ## v0.3.3 — Close-Out added to every edition
 
 - **Every book now ends with a Close-Out page** that formally closes the record: a final accounting with days kept, a binary YES/NO verdict on whether the standard held, what changed, and what carries forward. Declares the record closed — it cannot be reopened, erased, or restarted.
