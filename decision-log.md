@@ -2,6 +2,13 @@
 
 A permanent record of the decisions behind On Record. Newest first.
 
+## v0.3.5 — Web/marketing design system
+
+- **Brand-core design system added** at `WEBSITE/design-system/` — the digital counterpart to the object's austerity (flat, hairline rules, sharp corners, oxblood only for action).
+- Deliverables: a live self-contained `style-guide.html`, canonical `tokens.css` (CSS variables), and a paste-ready `ghl-brand-kit.md` for GoHighLevel (Brand Board values, IBM Plex fonts, and a Custom CSS block that restyles GHL components + suppresses its default shadows/rounded corners).
+- Nice tie-in: web form fields render as the book's ruled write-in line (hairline underline, oxblood on focus). No GHL connector exists, so setup is paste-ready, applied by hand.
+- Figma library (Claude Design) to mirror these tokens is the next step. `tokens.css` is source of truth if anything diverges.
+
 ## v0.3.4 — Design package received from Claude Design
 
 - **First visual design deliverables added** at `RECORD/Design/` — standalone HTML: Cover Spec, Editions, Interior Specs (layouts at 100%), and an interactive page-through model. Reflect the current spec (three editions, black/oxblood/dark-maroon palette, silver foil).
