@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Record — Editions" description="Edition lineup: Man on Record, Woman on Record, The Common Record" -->
+<helmet data-dc-atomics><meta name="design_doc_mode" content="canvas"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet"><style>body{margin:0;background:#2b2a27;font-family:"IBM Plex Sans",system-ui,sans-serif}a{color:#d8d5cd}a:hover{color:#fff}</style></helmet>
+
+<div style="min-height:100vh;box-sizing:border-box;padding:48px 56px 64px;display:flex;flex-direction:column;gap:36px">
+
+  <div style="display:flex;flex-direction:column;gap:6px">
+    <div style="font:500 11px 'IBM Plex Mono',monospace;letter-spacing:0.18em;color:#8a877f">ON RECORD · EDITION COVERS · 140 × 210 MM · SILVER FOIL ON CLOTH</div>
+    <div style="font:400 10px 'IBM Plex Mono',monospace;color:#6f6c64">Wordmark only. Spine and back board blank on all three. Hexes approximate — confirm against bindery cloth swatches.</div>
+  </div>
+
+  <div style="display:flex;gap:56px;flex-wrap:wrap;align-items:flex-start">
+
+    <sc-for list="{{ editions }}" as="ed" hint-placeholder-count="3">
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <div data-screen-label="{{ ed.label }}" style="position:relative;width:423px;height:635px;background:#161615;box-shadow:0 24px 60px rgba(0,0,0,0.5),0 2px 8px rgba(0,0,0,0.4);border-radius:2px 5px 5px 2px" ref="{{ ed.setRef }}">
+          <div style="position:absolute;inset:0;border-radius:2px 5px 5px 2px;background-image:repeating-linear-gradient(0deg,rgba(255,255,255,0.016) 0px,rgba(255,255,255,0.016) 1px,rgba(0,0,0,0.02) 1px,rgba(0,0,0,0.02) 2px),repeating-linear-gradient(90deg,rgba(255,255,255,0.014) 0px,rgba(255,255,255,0.014) 1px,rgba(0,0,0,0.018) 1px,rgba(0,0,0,0.018) 2px)"></div>
+          <div style="position:absolute;left:0;top:0;bottom:0;width:12px;border-radius:2px 0 0 2px;background:linear-gradient(90deg,rgba(255,255,255,0.07),rgba(0,0,0,0.28) 60%,rgba(255,255,255,0.04))"></div>
+          <div style="position:absolute;inset:0;border-radius:2px 5px 5px 2px;background:linear-gradient(120deg,rgba(255,255,255,0.045) 0%,rgba(255,255,255,0) 34%,rgba(0,0,0,0.10) 100%)"></div>
+          <div style="position:absolute;left:0;right:0;bottom:66px;display:flex;justify-content:center">
+            <span style="font-size:13px;font-weight:500;letter-spacing:0.5em;text-indent:0.5em;line-height:1;white-space:nowrap;background:linear-gradient(105deg,#9fa3a8 0%,#dfe2e6 45%,#a7abb0 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent">{{ ed.wordmark }}</span>
+          </div>
+        </div>
+
+        <sc-if value="{{ showSpecs }}" hint-placeholder-val="{{ true }}">
+          <div style="display:grid;grid-template-columns:86px 1fr;gap:5px 12px;width:423px;box-sizing:border-box;padding:16px 18px;background:#242320;border:1px solid #3a3833;font:400 10.5px 'IBM Plex Mono',monospace;line-height:1.5;color:#b6b3aa">
+            <div style="color:#8a877f">EDITION</div><div style="color:#e4e1d9">{{ ed.label }}</div>
+            <div style="color:#8a877f">CLOTH</div><div>{{ ed.clothName }} · ~{{ ed.cloth }}</div>
+            <div style="color:#8a877f">FINISH</div><div>Silver foil stamp, wordmark only</div>
+            <div style="color:#8a877f">EXTENT</div><div>{{ ed.extent }}</div>
+            <div style="color:#8a877f">NOTE</div><div>{{ ed.note }}</div>
+          </div>
+        </sc-if>
+      </div>
+    </sc-for>
+
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:14px">
+    <div style="font:500 11px 'IBM Plex Mono',monospace;letter-spacing:0.18em;color:#8a877f">PAIRED SET · SPINES · THE COMMON RECORD SHIPS SEALED</div>
+    <div style="display:flex;align-items:flex-end;gap:0;padding:0 0 0 4px">
+      <div style="width:76px;height:635px;background:#161615;border-radius:3px;box-shadow:0 18px 44px rgba(0,0,0,0.5);position:relative">
+        <div style="position:absolute;inset:0;border-radius:3px;background:linear-gradient(90deg,rgba(255,255,255,0.06),rgba(255,255,255,0) 25%,rgba(0,0,0,0.22) 100%)"></div>
+      </div>
+      <div style="width:76px;height:635px;background:#4A0E10;border-radius:3px;box-shadow:0 18px 44px rgba(0,0,0,0.5);position:relative;margin-left:6px">
+        <div style="position:absolute;inset:0;border-radius:3px;background:linear-gradient(90deg,rgba(255,255,255,0.06),rgba(255,255,255,0) 25%,rgba(0,0,0,0.22) 100%)"></div>
+      </div>
+      <div style="width:52px;height:601px;background:#2E1214;border-radius:3px;box-shadow:0 18px 44px rgba(0,0,0,0.5);position:relative;margin-left:6px">
+        <div style="position:absolute;inset:0;border-radius:3px;background:linear-gradient(90deg,rgba(255,255,255,0.06),rgba(255,255,255,0) 25%,rgba(0,0,0,0.22) 100%)"></div>
+        <div style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%) rotate(90deg);white-space:nowrap;font:500 8px 'IBM Plex Mono',monospace;letter-spacing:0.3em;color:#8a877f">SEALED · DO NOT OPEN UNTIL DAY 90</div>
+      </div>
+      <div style="margin-left:36px;max-width:360px;font:400 10.5px 'IBM Plex Mono',monospace;line-height:1.7;color:#8a877f;align-self:center">Spines blank per cover spec. Two 90-day individual volumes + one sealed 45-day Common Record (slimmer). Dark maroon is the optical blend of the black and the oxblood — the shared book belongs to both.</div>
+    </div>
+  </div>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showSpecs&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Display&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const showSpecs = this.props.showSpecs ?? true;
+    return {
+      showSpecs,
+      editions: [
+        {
+          label: 'MAN ON RECORD', wordmark: 'MAN ON RECORD',
+          cloth: '#161615', clothName: 'Black buckram',
+          extent: '90-day · individual',
+          note: 'Reference ~#111111; shown as bound cloth.'
+        },
+        {
+          label: 'WOMAN ON RECORD', wordmark: 'WOMAN ON RECORD',
+          cloth: '#4A0E10', clothName: 'Oxblood buckram',
+          extent: '90-day · individual',
+          note: 'Deep blood-red ledger cloth. Severe, not soft.'
+        },
+        {
+          label: 'THE COMMON RECORD', wordmark: 'THE COMMON RECORD',
+          cloth: '#2E1214', clothName: 'Dark maroon buckram',
+          extent: '45-day · co-authored · ships sealed',
+          note: 'Black bled with oxblood — belongs to both.'
+        }
+      ].map((e) => ({ ...e, setRef: (el) => { if (el) el.style.background = e.cloth; } }))
+    };
+  }
+}
+</script>
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#1c1c1a"/><rect x="34" y="30" width="32" height="40" fill="none" stroke="#eceae4" stroke-width="2.5"/><line x1="40" y1="40" x2="60" y2="40" stroke="#eceae4" stroke-width="2"/><line x1="40" y1="48" x2="60" y2="48" stroke="#8a877f" stroke-width="1.5"/><line x1="40" y1="54" x2="60" y2="54" stroke="#8a877f" stroke-width="1.5"/></svg></template>
+</body>
+</html>
