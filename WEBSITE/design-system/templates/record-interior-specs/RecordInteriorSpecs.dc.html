@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Record — Interior Specs" description="Interior production spec with page layouts at 100%: paper, margins, and page anatomy" -->
+<helmet data-dc-atomics><meta name="design_doc_mode" content="canvas"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet"><style>body{margin:0;background:#eceae4;font-family:"IBM Plex Sans",system-ui,sans-serif}a{color:#1c1c1a}a:hover{color:#555}</style></helmet>
+
+<div style="padding:44px;display:flex;flex-direction:column;gap:56px">
+
+  <!-- ============ SHARED INTERIOR — MAN / WOMAN ON RECORD ============ -->
+  <div style="display:flex;flex-direction:column;gap:20px">
+    <div style="display:flex;flex-direction:column;gap:4px">
+      <div style="font:500 12px 'IBM Plex Mono',monospace;letter-spacing:0.18em;color:#1c1c1a">INTERIOR SPEC — MAN ON RECORD / WOMAN ON RECORD <span style="color:#8a877f">(MECHANICALLY IDENTICAL)</span></div>
+      <div style="font:400 10px 'IBM Plex Mono',monospace;color:#6b6a66">90-day · 113 pp · Identity Standard → Non-Negotiable Standards → Initiation Days 1–7 → Daily ×90 → Weekly after every 7th (×13) → Close-Out · pages shown at 100% (140 × 210 mm)</div>
+    </div>
+
+    <div style="display:flex;gap:36px;flex-wrap:wrap;align-items:flex-start">
+
+      <div style="width:400px;background:#f8f6f1;border:1px solid #c9c6bd;padding:26px 28px;box-sizing:border-box">
+        <div style="font-size:13px;font-weight:600;letter-spacing:0.1em;color:#1c1c1a">INTERIOR — PRODUCTION SPEC</div>
+        <div style="height:1.5px;background:#1c1c1a;margin:12px 0 18px"></div>
+        <div style="display:grid;grid-template-columns:110px 1fr;gap:10px 14px;font-size:11px;line-height:1.55;color:#1c1c1a">
+          <div style="font-weight:600;letter-spacing:0.06em;font-size:9.5px;padding-top:1px">TRIM</div><div>140 × 210 mm. Lay-flat binding (section-sewn preferred, PUR layflat fallback). Non-refillable.</div>
+          <div style="font-weight:600;letter-spacing:0.06em;font-size:9.5px;padding-top:1px">PAPER</div><div>100–120 GSM uncoated, off-white/bone. Write-test for ink holdout.</div>
+          <div style="font-weight:600;letter-spacing:0.06em;font-size:9.5px;padding-top:1px">TYPE</div><div>IBM Plex Sans only (Inter fallback). Headers 13 px equiv SemiBold caps +8–10% tracking; body 10.5; labels 9.5 SemiBold caps; asides 8.5 italic grey. Paragraph styles only.</div>
+          <div style="font-weight:600;letter-spacing:0.06em;font-size:9.5px;padding-top:1px">MARGINS</div><div>Inner 20 mm · outer 14 mm · head 16 mm (22 mm front matter) · foot 20 mm. Mirrored recto/verso.</div>
+          <div style="font-weight:600;letter-spacing:0.06em;font-size:9.5px;padding-top:1px">RULES</div><div>Writing rules 0.5 pt hairline; header rule 1 pt; weekly &amp; close-out header rule 2 pt. Ink: near-black only.</div>
+          <div style="font-weight:600;letter-spacing:0.06em;font-size:9.5px;padding-top:1px">NUMBERING</div><div>Day count and Week count only. No folios, no decorative elements.</div>
+          <div style="font-weight:600;letter-spacing:0.06em;font-size:9.5px;padding-top:1px">MASTERS</div><div>Daily ×90 and Weekly ×13 are master-page-driven. Initiation Days 1–7 are fixed pages, one act per page, one ruled response line each.</div>
+        </div>
+      </div>
+
+      <sc-for list="{{ indivPages }}" as="pg" hint-placeholder-count="7">
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <div style="font:500 11px 'IBM Plex Mono',monospace;color:#6b6a66">{{ pg.caption }}</div>
+          <div data-screen-label="{{ pg.caption }}" style="position:relative;width:529px;height:794px;background:#f8f6f1;box-shadow:0 2px 14px rgba(20,20,19,0.25)">
+            <dc-import name="BookPage" page="{{ pg.page }}" hint-size="529px,794px" style="position:absolute;inset:0"></dc-import>
+          </div>
+        </div>
+      </sc-for>
+
+    </div>
+  </div>
+
+  <!-- ============ THE COMMON RECORD ============ -->
+  <div style="display:flex;flex-direction:column;gap:20px">
+    <div style="display:flex;flex-direction:column;gap:4px">
+      <div style="font:500 12px 'IBM Plex Mono',monospace;letter-spacing:0.18em;color:#1c1c1a">INTERIOR SPEC — THE COMMON RECORD <span style="color:#8a877f">(CO-AUTHORED · 45-DAY · SHIPS SEALED)</span></div>
+      <div style="font:400 10px 'IBM Plex Mono',monospace;color:#6b6a66">56 pp · Co-Initiation (three acts) → Joint Standards → Daily ×45 → Weekly after every 7th (×6) → Close-Out · two signatures on every closing page — a page closed with one signature is not closed</div>
+    </div>
+
+    <div style="display:flex;gap:36px;flex-wrap:wrap;align-items:flex-start">
+
+      <div style="width:400px;background:#f8f6f1;border:1px solid #c9c6bd;padding:26px 28px;box-sizing:border-box">
+        <div style="font-size:13px;font-weight:600;letter-spacing:0.1em;color:#1c1c1a">WHAT DIFFERS FROM THE INDIVIDUAL BOOKS</div>
+        <div style="height:1.5px;background:#1c1c1a;margin:12px 0 18px"></div>
+        <div style="display:grid;grid-template-columns:110px 1fr;gap:10px 14px;font-size:11px;line-height:1.55;color:#1c1c1a">
+          <div style="font-weight:600;letter-spacing:0.06em;font-size:9.5px;padding-top:1px">SHARED</div><div>Same trim, paper, binding, typeface, margins, rules, severity. Editions never drift.</div>
+          <div style="font-weight:600;letter-spacing:0.06em;font-size:9.5px;padding-top:1px">EXTENT</div><div>45 days, not 90. Co-Initiation replaces the solo Initiation.</div>
+          <div style="font-weight:600;letter-spacing:0.06em;font-size:9.5px;padding-top:1px">SIGNATURES</div><div>Two signature lines on every acknowledgment, declaration, daily, weekly, and close page. The dual signature deliberately rhymes with a vow.</div>
+          <div style="font-weight:600;letter-spacing:0.06em;font-size:9.5px;padding-top:1px">UNLOCK</div><div>Ships sealed in the paired set. Opens only after both partners finish their 90 days and break the sealed reveal in their individual volumes. If only one finishes, this book never unlocks.</div>
+          <div style="font-weight:600;letter-spacing:0.06em;font-size:9.5px;padding-top:1px">CONSENT</div><div>The exchange is voluntary and mutual at the moment of reveal. Never forced — packaging notes some couples should do it with a counselor present.</div>
+        </div>
+      </div>
+
+      <sc-for list="{{ commonPages }}" as="pg" hint-placeholder-count="7">
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <div style="font:500 11px 'IBM Plex Mono',monospace;color:#6b6a66">{{ pg.caption }}</div>
+          <div data-screen-label="{{ pg.caption }}" style="position:relative;width:529px;height:794px;background:#f8f6f1;box-shadow:0 2px 14px rgba(20,20,19,0.25)">
+            <dc-import name="BookPage" page="{{ pg.page }}" hint-size="529px,794px" style="position:absolute;inset:0"></dc-import>
+          </div>
+        </div>
+      </sc-for>
+
+    </div>
+  </div>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    const RECTO = '16mm 14mm 20mm 20mm';
+    const VERSO = '16mm 20mm 20mm 14mm';
+    return {
+      indivPages: [
+        { caption: 'P1 · IDENTITY STANDARD (RECTO)', page: { isIdentity: true } },
+        { caption: 'P2 · NON-NEGOTIABLE STANDARDS (VERSO)', page: { isStandards: true } },
+        { caption: 'P3 · INITIATION — DAY 1 · DECLARE (ONE ACT / PAGE, ×7)', page: { isInitDay: true, n: 1, word: 'DECLARE', prompt: 'Write, in one sentence, the person you are choosing to become. Not a goal. A person.', pad: RECTO } },
+        { caption: 'P9 · INITIATION — DAY 7 · SIGN', page: { isInitSign: true, pad: RECTO } },
+        { caption: 'DAILY MASTER · ×90', page: { isDaily: true, n: 1, pad: VERSO } },
+        { caption: 'WEEKLY ESCALATION MASTER · ×13', page: { isWeekly: true, week: 1, from: 1, to: 7, denom: 7, pad: RECTO } },
+        { caption: 'P113 · CLOSE-OUT — DAY 90 (FINAL PAGE)', page: { isCloseOut: true, pad: RECTO } }
+      ],
+      commonPages: [
+        { caption: 'P1 · CO-INITIATION — I · THE EXCHANGE (NO WRITING)', page: { isExchange: true, pad: RECTO } },
+        { caption: 'P2 · CO-INITIATION — II · ACKNOWLEDGMENT (MIRRORED COLUMNS)', page: { isAck: true, pad: VERSO } },
+        { caption: 'P3 · CO-INITIATION — III · DECLARATION', page: { isDeclaration: true, pad: RECTO } },
+        { caption: 'P4 · JOINT STANDARDS', page: { isJointStandards: true, pad: VERSO } },
+        { caption: 'DAILY MASTER · ×45 · TWO SIGNATURES', page: { isDailyDuo: true, n: 1, pad: RECTO } },
+        { caption: 'WEEKLY ESCALATION MASTER · ×6 · TWO SIGNATURES', page: { isWeeklyDuo: true, week: 1, from: 1, to: 7, denom: 7, pad: VERSO } },
+        { caption: 'P56 · CLOSE-OUT — DAY 45 (FINAL PAGE)', page: { isCloseOutDuo: true, pad: VERSO } }
+      ]
+    };
+  }
+}
+</script>
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#1c1c1a"/><rect x="34" y="30" width="32" height="40" fill="none" stroke="#eceae4" stroke-width="2.5"/><line x1="40" y1="40" x2="60" y2="40" stroke="#eceae4" stroke-width="2"/><line x1="40" y1="48" x2="60" y2="48" stroke="#8a877f" stroke-width="1.5"/><line x1="40" y1="54" x2="60" y2="54" stroke="#8a877f" stroke-width="1.5"/></svg></template>
+</body>
+</html>
