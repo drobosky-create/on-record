@@ -1,5 +1,7 @@
-# Website
+# WEBSITE
 
-Web presence for Man on Record / The Record. Not yet started.
+Web & marketing presence for On Record.
 
-> Placeholder. Add site source, copy, and assets here when the web phase begins.
+- [`design-system/`](design-system/) — the brand-core design system (style guide, tokens, and a paste-ready GoHighLevel brand kit). Start here for anything web/GHL.
+
+Site source and page builds land here as the web phase progresses.
