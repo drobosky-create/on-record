@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Record — Interactive Model" description="Interactive page-through model of The Record book: cover, spreads, and every interior page type" -->
+<helmet data-dc-atomics><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet"><style>body{margin:0;background:#2b2a27;font-family:"IBM Plex Sans",system-ui,sans-serif}a{color:#d8d5cd}a:hover{color:#fff}input[type="range"]{accent-color:#8a877f}</style></helmet>
+
+<div style="min-height:100vh;display:flex;flex-direction:column;align-items:center;box-sizing:border-box;padding:24px 24px 20px">
+
+  <div style="display:flex;gap:8px">
+    <sc-for list="{{ tabs }}" as="tab" hint-placeholder-count="3">
+      <button onClick="{{ tab.onClick }}" style="padding:10px 18px;font:500 11px 'IBM Plex Mono',monospace;letter-spacing:0.14em;cursor:pointer;border-radius:2px;border:1px solid #55524b;background:transparent;color:#8a877f" ref="{{ tab.setRef }}">{{ tab.label }}</button>
+    </sc-for>
+  </div>
+
+  <div style="font:500 11px 'IBM Plex Mono',monospace;letter-spacing:0.18em;color:#8a877f;margin-top:16px">{{ heading }}</div>
+
+  <div style="flex:1;display:flex;align-items:center;justify-content:center;width:100%;margin:16px 0">
+    <div style="zoom:0.75" ref="{{ setZoom }}">
+
+      <sc-if value="{{ isCover }}" hint-placeholder-val="{{ true }}">
+        <div data-screen-label="Cover" style="position:relative;width:529px;height:794px;background:#161615;box-shadow:0 24px 60px rgba(0,0,0,0.5),0 2px 8px rgba(0,0,0,0.4);border-radius:2px 6px 6px 2px" ref="{{ setCloth }}">
+          <div style="position:absolute;left:0;top:0;bottom:0;width:14px;background:linear-gradient(90deg,rgba(255,255,255,0.06),rgba(0,0,0,0.25) 60%,rgba(255,255,255,0.04))"></div>
+          <div style="position:absolute;left:0;right:0;bottom:83px;display:flex;justify-content:center">
+            <span style="font-size:16px;font-weight:500;letter-spacing:0.5em;text-indent:0.5em;line-height:1;white-space:nowrap;background:linear-gradient(105deg,#9fa3a8 0%,#dfe2e6 45%,#a7abb0 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent">{{ wordmark }}</span>
+          </div>
+        </div>
+      </sc-if>
+
+      <sc-if value="{{ isSpread }}" hint-placeholder-val="{{ false }}">
+        <div data-screen-label="Spread" style="position:relative;display:flex;box-shadow:0 24px 60px rgba(0,0,0,0.5),0 2px 8px rgba(0,0,0,0.4)">
+          <div style="position:relative;width:529px;height:794px;background:#f8f6f1">
+            <dc-import name="BookPage" page="{{ leftPage }}" hint-size="529px,794px" style="position:absolute;inset:0"></dc-import>
+          </div>
+          <div style="position:relative;width:529px;height:794px;background:#f8f6f1">
+            <dc-import name="BookPage" page="{{ rightPage }}" hint-size="529px,794px" style="position:absolute;inset:0"></dc-import>
+          </div>
+          <div style="position:absolute;left:50%;top:0;bottom:0;width:72px;transform:translateX(-50%);pointer-events:none;background:linear-gradient(90deg,rgba(28,28,26,0) 0%,rgba(28,28,26,0.13) 46%,rgba(28,28,26,0.2) 50%,rgba(28,28,26,0.13) 54%,rgba(28,28,26,0) 100%)"></div>
+          <div style="position:absolute;left:-6px;top:3px;bottom:3px;width:6px;background:repeating-linear-gradient(180deg,#efede6 0px,#efede6 2px,#dcd9d0 2px,#dcd9d0 3px);border-radius:2px 0 0 2px"></div>
+          <div style="position:absolute;right:-6px;top:3px;bottom:3px;width:6px;background:repeating-linear-gradient(180deg,#efede6 0px,#efede6 2px,#dcd9d0 2px,#dcd9d0 3px);border-radius:0 2px 2px 0"></div>
+        </div>
+      </sc-if>
+
+    </div>
+  </div>
+
+  <div style="display:flex;align-items:center;gap:20px;color:#d8d5cd">
+    <button onClick="{{ goPrev }}" style="width:44px;height:44px;background:none;border:1px solid #55524b;color:#d8d5cd;font-size:16px;cursor:pointer;border-radius:2px">←</button>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:8px">
+      <div style="font:500 11px 'IBM Plex Mono',monospace;letter-spacing:0.12em;min-width:260px;text-align:center">{{ label }}</div>
+      <input type="range" min="0" max="{{ maxIdx }}" value="{{ idx }}" onChange="{{ onSlide }}" style="width:320px">
+    </div>
+    <button onClick="{{ goNext }}" style="width:44px;height:44px;background:none;border:1px solid #55524b;color:#d8d5cd;font-size:16px;cursor:pointer;border-radius:2px">→</button>
+  </div>
+  <div style="font:400 10px 'IBM Plex Mono',monospace;color:#6f6c64;margin-top:10px">← → arrow keys page through</div>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+
+    const RECTO = '16mm 14mm 20mm 20mm'; // odd page: inner margin left
+    const VERSO = '16mm 20mm 20mm 14mm';
+    const assignPads = (pages) => {
+      pages.forEach((p, i) => { p.pad = (i + 1) % 2 === 1 ? RECTO : VERSO; });
+      return pages;
+    };
+
+    const initActs = [
+      ['DECLARE', 'Write, in one sentence, the person you are choosing to become. Not a goal. A person.'],
+      ['STANDARD', 'Restate your first Non-Negotiable Standard in your own words. Why this one, first.'],
+      ['COST', 'Name the cost of failing this standard — to you, and to someone else. Be specific.'],
+      ['WITNESS', 'Name who is watching. If no one, write that.'],
+      ['BASELINE', 'Record where you actually stand today. No improvement. No excuse.'],
+      ['OBLIGATION', 'Name the single obligation you carry into Day 1. One.']
+    ];
+
+    const buildIndividual = () => {
+      const pages = [
+        { isIdentity: true, name: 'IDENTITY STANDARD' },
+        { isStandards: true, name: 'NON-NEGOTIABLE STANDARDS' }
+      ];
+      initActs.forEach((a, i) => pages.push({ isInitDay: true, n: i + 1, word: a[0], prompt: a[1], name: 'INITIATION D' + (i + 1) }));
+      pages.push({ isInitSign: true, name: 'INITIATION D7 · SIGN' });
+      let day = 1;
+      for (let w = 1; w <= 12; w++) {
+        for (let i = 0; i < 7; i++) { pages.push({ isDaily: true, n: day, name: 'DAY ' + day }); day++; }
+        pages.push({ isWeekly: true, week: w, from: (w - 1) * 7 + 1, to: w * 7, denom: 7, name: 'WEEK ' + w });
+      }
+      for (let i = 0; i < 6; i++) { pages.push({ isDaily: true, n: day, name: 'DAY ' + day }); day++; }
+      pages.push({ isWeekly: true, week: 13, from: 85, to: 90, denom: 6, name: 'WEEK 13' });
+      pages.push({ isCloseOut: true, name: 'CLOSE-OUT' });
+      return assignPads(pages); // 113 pages
+    };
+
+    const buildCommon = () => {
+      const pages = [
+        { isExchange: true, name: 'CO-INITIATION I' },
+        { isAck: true, name: 'CO-INITIATION II' },
+        { isDeclaration: true, name: 'CO-INITIATION III' },
+        { isJointStandards: true, name: 'JOINT STANDARDS' }
+      ];
+      let day = 1;
+      for (let w = 1; w <= 6; w++) {
+        for (let i = 0; i < 7; i++) { pages.push({ isDailyDuo: true, n: day, name: 'DAY ' + day }); day++; }
+        pages.push({ isWeeklyDuo: true, week: w, from: (w - 1) * 7 + 1, to: w * 7, denom: 7, name: 'WEEK ' + w });
+      }
+      for (let i = 0; i < 3; i++) { pages.push({ isDailyDuo: true, n: day, name: 'DAY ' + day }); day++; }
+      pages.push({ isCloseOutDuo: true, name: 'CLOSE-OUT' });
+      return assignPads(pages); // 56 pages
+    };
+
+    const indiv = buildIndividual();
+    this.editions = {
+      man: { label: 'MAN ON RECORD', cloth: '#161615', wordmark: 'MAN ON RECORD', sub: '90-DAY · BLACK CLOTH · 140 × 210 MM', pages: indiv },
+      woman: { label: 'WOMAN ON RECORD', cloth: '#4A0E10', wordmark: 'WOMAN ON RECORD', sub: '90-DAY · OXBLOOD CLOTH · 140 × 210 MM', pages: indiv },
+      common: { label: 'THE COMMON RECORD', cloth: '#2E1214', wordmark: 'THE COMMON RECORD', sub: '45-DAY · CO-AUTHORED · DARK MAROON CLOTH · 140 × 210 MM', pages: buildCommon() }
+    };
+    this.blank = { isBlank: true, name: '' };
+
+    let ed = 'man', idx = 0;
+    try {
+      ed = localStorage.getItem('onrecord-models-ed') || 'man';
+      if (!this.editions[ed]) ed = 'man';
+      idx = parseInt(localStorage.getItem('onrecord-models-idx-' + ed) || '0', 10) || 0;
+    } catch (e) {}
+    this.state = { ed, idx: Math.max(0, Math.min(idx, this.maxIdxFor(ed))), zoom: 0.75 };
+  }
+
+  maxIdxFor(ed) {
+    return Math.floor(this.editions[ed].pages.length / 2) + 1;
+  }
+
+  componentDidMount() {
+    this.onKey = (e) => {
+      if (e.key === 'ArrowRight') this.step(1);
+      if (e.key === 'ArrowLeft') this.step(-1);
+    };
+    this.onResize = () => {
+      const z = Math.min(1, (window.innerHeight - 280) / 794, (window.innerWidth - 80) / 1058);
+      this.setState({ zoom: Math.max(0.3, z) });
+    };
+    window.addEventListener('keydown', this.onKey);
+    window.addEventListener('resize', this.onResize);
+    this.onResize();
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('keydown', this.onKey);
+    window.removeEventListener('resize', this.onResize);
+  }
+
+  setIdx(idx) {
+    idx = Math.max(0, Math.min(this.maxIdxFor(this.state.ed), idx));
+    try { localStorage.setItem('onrecord-models-idx-' + this.state.ed, String(idx)); } catch (e) {}
+    this.setState({ idx });
+  }
+
+  step(d) { this.setIdx(this.state.idx + d); }
+
+  switchEd(ed) {
+    let idx = 0;
+    try { idx = parseInt(localStorage.getItem('onrecord-models-idx-' + ed) || '0', 10) || 0; } catch (e) {}
+    try { localStorage.setItem('onrecord-models-ed', ed); } catch (e) {}
+    this.setState({ ed, idx: Math.max(0, Math.min(idx, this.maxIdxFor(ed))) });
+  }
+
+  renderVals() {
+    const { ed, idx, zoom } = this.state;
+    const edition = this.editions[ed];
+    const maxIdx = this.maxIdxFor(ed);
+    const isCover = idx === 0;
+    const li = 2 * idx - 2, ri = 2 * idx - 1;
+    const leftPage = idx > 0 ? (li >= 1 ? edition.pages[li - 1] : this.blank) : this.blank;
+    const rightPage = idx > 0 ? (edition.pages[ri - 1] || this.blank) : this.blank;
+    let label = 'COVER';
+    if (!isCover) {
+      const ln = leftPage.name, rn = rightPage.name;
+      label = 'SPREAD ' + idx + ' / ' + maxIdx + ' · ' + (ln && rn ? ln + ' — ' + rn : (ln || rn));
+    }
+    const tabs = ['man', 'woman', 'common'].map((k) => ({
+      label: this.editions[k].label,
+      setRef: (el) => {
+        if (!el) return;
+        el.style.border = '1px solid ' + (k === ed ? '#d8d5cd' : '#55524b');
+        el.style.background = k === ed ? '#d8d5cd' : 'transparent';
+        el.style.color = k === ed ? '#1c1c1a' : '#8a877f';
+      },
+      onClick: () => this.switchEd(k)
+    }));
+    return {
+      tabs, idx, isCover, isSpread: !isCover, leftPage, rightPage, label, maxIdx,
+      wordmark: edition.wordmark,
+      setZoom: (el) => { if (el) el.style.zoom = zoom; },
+      setCloth: (el) => { if (el) el.style.background = edition.cloth; },
+      heading: edition.label + ' · BOUND MODEL · ' + edition.sub,
+      goPrev: () => this.step(-1),
+      goNext: () => this.step(1),
+      onSlide: (e) => this.setIdx(parseInt(e.target.value, 10) || 0)
+    };
+  }
+}
+</script>
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#1c1c1a"/><rect x="34" y="30" width="32" height="40" fill="none" stroke="#eceae4" stroke-width="2.5"/><line x1="40" y1="40" x2="60" y2="40" stroke="#eceae4" stroke-width="2"/><line x1="40" y1="48" x2="60" y2="48" stroke="#8a877f" stroke-width="1.5"/><line x1="40" y1="54" x2="60" y2="54" stroke="#8a877f" stroke-width="1.5"/></svg></template>
+</body>
+</html>
