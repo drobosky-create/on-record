@@ -29,6 +29,18 @@ Everything **shared across editions** lives at the top level and must never dive
 
 **Edition-specific differences** live under [`EDITIONS/`](EDITIONS/) — only the wordmark, cover, and (for The Common Record) the co-signed pages and reveal mechanic. Nothing that should stay common belongs there.
 
+## For Claude Design — start here
+
+This repo is the single source of truth. To generate design work, read these files (in this order):
+
+1. **Design system (web/brand core):** [`WEBSITE/design-system/tokens.css`](WEBSITE/design-system/tokens.css) and [`WEBSITE/design-system/style-guide.html`](WEBSITE/design-system/style-guide.html) — canonical colour, type (IBM Plex Sans/Mono), spacing, and components. GHL setup in [`WEBSITE/design-system/ghl-brand-kit.md`](WEBSITE/design-system/ghl-brand-kit.md).
+2. **Cover system:** [`RECORD/Covers/cover-spec.md`](RECORD/Covers/cover-spec.md) — palette (Ink/Man `#141414`, Oxblood/Woman `#5C1014`, Maroon/Common `#2E1214`), silver foil, cloth construction.
+3. **Per-edition briefs (self-contained):** [`EDITIONS/man-on-record/design-brief.md`](EDITIONS/man-on-record/design-brief.md), [`EDITIONS/woman-on-record/design-brief.md`](EDITIONS/woman-on-record/design-brief.md), [`EDITIONS/the-common-record/design-brief.md`](EDITIONS/the-common-record/design-brief.md).
+4. **Page copy:** [`CONTENT/`](CONTENT/) (individual editions) and [`EDITIONS/the-common-record/content.md`](EDITIONS/the-common-record/content.md).
+5. **Brand & voice:** [`BRAND/`](BRAND/) and the master [`RECORD/design-brief.md`](RECORD/design-brief.md).
+
+Rule of precedence: `tokens.css` and the `CONTENT/` copy are canonical. Prior visual exports live in [`RECORD/Design/`](RECORD/Design/) for reference only — if anything conflicts, the written spec wins.
+
 ## Working principle
 
 Every meaningful change is intentional, documented, and permanent — the same discipline the product demands. See [`decision-log.md`](decision-log.md) and [`CONTRIBUTING.md`](CONTRIBUTING.md).
