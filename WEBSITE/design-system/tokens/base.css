@@ -1,0 +1,13 @@
+/* On Record — minimal base. The register is administrative: bone page,
+   ink text, oxblood only where action matters. No shadows, ever. */
+body.or-base {
+  margin: 0;
+  background: var(--or-bone);
+  color: var(--or-ink);
+  font-family: var(--or-font-sans);
+  font-size: var(--or-fs-body);
+  line-height: var(--or-lh-body);
+  -webkit-font-smoothing: antialiased;
+}
+.or-base a { color: var(--or-oxblood); }
+.or-base a:hover { color: var(--or-maroon); }

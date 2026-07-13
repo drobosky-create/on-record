@@ -1,0 +1,5 @@
+/* On Record — webfonts.
+   IBM Plex Sans (400/500/600) + IBM Plex Mono (400/500).
+   Loaded from Google Fonts — the brand's own kit specifies these exact
+   Google Fonts loads (see WEBSITE/design-system/ghl-brand-kit.md). */
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap");

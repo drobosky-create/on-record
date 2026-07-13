@@ -1,0 +1,22 @@
+/* On Record — type tokens. One superfamily: IBM Plex.
+   Sans for everything; Mono reserved for labels, counters, "ledger" numerals. */
+:root {
+  --or-font-sans: "IBM Plex Sans", system-ui, sans-serif;
+  --or-font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  --or-fs-display: 44px;  --or-lh-display: 1.05; /* @kind font */
+  --or-fs-h1:      32px;  --or-lh-h1:      1.1; /* @kind font */
+  --or-fs-h2:      22px;  --or-lh-h2:      1.2; /* @kind font */
+  --or-fs-h3:      17px;  --or-lh-h3:      1.3; /* @kind font */
+  --or-fs-body:    16px;  --or-lh-body:    1.6; /* @kind font */
+  --or-fs-small:   13px;  --or-lh-small:   1.5; /* @kind font */
+  --or-fs-label:   12px;  --or-track-label: 0.12em; /* uppercase mono labels */
+
+  --or-w-regular: 400; /* @kind font */
+  --or-w-medium:  500; /* @kind font */
+  --or-w-semi:    600; /* @kind font */
+
+  /* Semantic aliases */
+  --font-body:  var(--or-font-sans);
+  --font-label: var(--or-font-mono);
+}

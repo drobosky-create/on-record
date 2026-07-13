@@ -1,0 +1,36 @@
+/* On Record — colour tokens.
+   Source: WEBSITE/design-system/tokens.css (drobosky-create/on-record).
+   Austere / administrative. No shadows, no rounded corners, no gradients
+   except the silver-foil wordmark treatment. */
+:root {
+  /* Base */
+  --or-ink:        #141414; /* primary text, dark surfaces (Man on Record) */
+  --or-bone:       #F1ECE1; /* page background — "the paper" */
+  --or-paper-2:    #E7E0D2; /* raised card surface on bone */
+  --or-oxblood:    #5C1014; /* primary brand accent — CTAs, links (Woman on Record) */
+  --or-maroon:     #2E1214; /* deep accent / hover (The Common Record) */
+  --or-silver:     #A7AAB0; /* metallic hairlines, muted labels, foil */
+  --or-hairline:   #D7CFBE; /* 1px rules on bone */
+  --or-hairline-d: #2A2A2A; /* 1px rules on ink */
+  --or-muted:      #6E685F; /* secondary text on bone */
+
+  /* Cover cloth references (physical editions) */
+  --or-cloth-black:   #161615; /* Man on Record — bound cloth; bindery reference ~#111111 */
+  --or-cloth-oxblood: #4A0E10; /* Woman on Record */
+  --or-cloth-maroon:  #2E1214; /* The Common Record */
+
+  /* Foil — the ONLY permitted gradient */
+  --or-foil: linear-gradient(105deg, #9fa3a8 0%, #dfe2e6 45%, #a7abb0 100%); /* @kind other */
+
+  /* Semantic aliases */
+  --text-body:    var(--or-ink);
+  --text-muted:   var(--or-muted);
+  --text-on-dark: var(--or-bone);
+  --surface-page: var(--or-bone);
+  --surface-card: var(--or-paper-2);
+  --surface-dark: var(--or-ink);
+  --accent:       var(--or-oxblood);
+  --accent-hover: var(--or-maroon);
+  --line:         var(--or-hairline);
+  --line-on-dark: var(--or-hairline-d);
+}

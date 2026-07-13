@@ -1,0 +1,9 @@
+/* On Record — space + structure tokens. 4px base. Sharp corners, always. */
+:root {
+  --or-s1: 4px;  --or-s2: 8px;  --or-s3: 12px; --or-s4: 16px;
+  --or-s5: 24px; --or-s6: 32px; --or-s7: 48px; --or-s8: 64px; --or-s9: 96px;
+
+  --or-radius: 0;    /* sharp corners, always */
+  --or-border: 1px;  /* hairline weight */
+  --or-maxw: 720px;  /* text measure */
+}
