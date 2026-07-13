@@ -1,0 +1,42 @@
+/* On Record — Design Tokens (brand core)
+   Austere / administrative. No shadows, no rounded corners, no gradients
+   except the silver-foil wordmark treatment. Paste these variables into
+   GHL Custom CSS (see ghl-brand-kit.md). */
+
+:root {
+  /* — Colour — */
+  --or-ink:        #141414; /* primary text, dark surfaces (Man on Record) */
+  --or-bone:       #F1ECE1; /* page background — "the paper" */
+  --or-paper-2:    #E7E0D2; /* raised card surface on bone */
+  --or-oxblood:    #5C1014; /* primary brand accent — CTAs, links (Woman on Record) */
+  --or-maroon:     #2E1214; /* deep accent / hover (The Common Record) */
+  --or-silver:     #A7AAB0; /* metallic hairlines, muted labels, foil */
+  --or-hairline:   #D7CFBE; /* 1px rules on bone */
+  --or-hairline-d: #2A2A2A; /* 1px rules on ink */
+  --or-muted:      #6E685F; /* secondary text on bone */
+
+  /* — Type — */
+  --or-font-sans: "IBM Plex Sans", system-ui, sans-serif;
+  --or-font-mono: "IBM Plex Mono", ui-monospace, monospace; /* labels, counters, "ledger" numerals */
+
+  --or-fs-display: 44px;  --or-lh-display: 1.05;
+  --or-fs-h1:      32px;  --or-lh-h1:      1.1;
+  --or-fs-h2:      22px;  --or-lh-h2:      1.2;
+  --or-fs-h3:      17px;  --or-lh-h3:      1.3;
+  --or-fs-body:    16px;  --or-lh-body:    1.6;
+  --or-fs-small:   13px;  --or-lh-small:   1.5;
+  --or-fs-label:   12px;  --or-track-label: 0.12em; /* uppercase mono labels */
+
+  --or-w-regular: 400;
+  --or-w-medium:  500;
+  --or-w-semi:    600;
+
+  /* — Space (4px base) — */
+  --or-s1: 4px; --or-s2: 8px; --or-s3: 12px; --or-s4: 16px;
+  --or-s5: 24px; --or-s6: 32px; --or-s7: 48px; --or-s8: 64px; --or-s9: 96px;
+
+  /* — Structure — */
+  --or-radius: 0;        /* sharp corners, always */
+  --or-border: 1px;      /* hairline weight */
+  --or-maxw: 720px;      /* text measure */
+}

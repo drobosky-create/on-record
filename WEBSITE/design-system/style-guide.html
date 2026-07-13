@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>On Record — Design System</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+ --ink:#141414;--bone:#F1ECE1;--paper2:#E7E0D2;--oxblood:#5C1014;--maroon:#2E1214;
+ --silver:#A7AAB0;--hair:#D7CFBE;--haird:#2A2A2A;--muted:#6E685F;
+ --sans:"IBM Plex Sans",system-ui,sans-serif;--mono:"IBM Plex Mono",monospace;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bone);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:960px;margin:0 auto;padding:64px 32px 96px}
+.label{font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted)}
+h1,h2,h3{font-weight:600;margin:0}
+.display{font-size:44px;line-height:1.05;letter-spacing:-.01em}
+h1{font-size:32px;line-height:1.1;margin-bottom:8px}
+h2{font-size:22px;line-height:1.2}
+h3{font-size:17px;line-height:1.3}
+.rule{border:0;border-top:1px solid var(--hair);margin:56px 0 40px}
+.sec-label{display:block;font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin-bottom:20px}
+.grid{display:grid;gap:16px}
+.sw{border:1px solid var(--hair)}
+.sw .chip{height:96px}
+.sw .meta{padding:10px 12px;background:var(--bone)}
+.sw .name{font-size:13px;font-weight:500}
+.sw .hex{font-family:var(--mono);font-size:12px;color:var(--muted)}
+.cols4{grid-template-columns:repeat(4,1fr)}
+.cols3{grid-template-columns:repeat(3,1fr)}
+.cols2{grid-template-columns:repeat(2,1fr)}
+@media(max-width:720px){.cols4,.cols3,.cols2{grid-template-columns:repeat(2,1fr)}}
+.type-row{display:flex;align-items:baseline;gap:20px;padding:14px 0;border-bottom:1px solid var(--hair)}
+.type-row .spec{font-family:var(--mono);font-size:12px;color:var(--muted);min-width:150px}
+/* Buttons */
+.btn{display:inline-block;font-family:var(--sans);font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:.1em;padding:14px 24px;border:1px solid;border-radius:0;cursor:pointer;text-decoration:none;transition:none}
+.btn--primary{background:var(--oxblood);color:var(--bone);border-color:var(--oxblood)}
+.btn--primary:hover{background:var(--maroon);border-color:var(--maroon)}
+.btn--ghost{background:transparent;color:var(--ink);border-color:var(--ink)}
+.btn--ghost:hover{background:var(--ink);color:var(--bone)}
+/* Fields — styled as the book's ruled write-in lines */
+.field{margin-bottom:24px;max-width:420px}
+.field label{display:block;font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin-bottom:8px}
+.field input,.field textarea{width:100%;border:0;border-bottom:1px solid var(--ink);background:transparent;border-radius:0;padding:8px 0;font-family:var(--sans);font-size:16px;color:var(--ink);outline:none}
+.field input:focus,.field textarea:focus{border-bottom-color:var(--oxblood)}
+/* Cards */
+.card{border:1px solid var(--hair);background:var(--paper2);padding:24px}
+.card--ink{background:var(--ink);color:var(--bone);border-color:var(--haird)}
+/* Wordmark / foil */
+.plate{background:var(--ink);padding:56px 32px;text-align:center}
+.wordmark{font-family:var(--sans);font-weight:600;font-size:34px;letter-spacing:.02em;
+ background:linear-gradient(100deg,#8d9096 0%,#e9ebee 22%,#a7aab0 48%,#f4f5f7 70%,#9a9da3 100%);
+ -webkit-background-clip:text;background-clip:text;color:transparent}
+.wordmark--plain{color:var(--ink);background:none;-webkit-text-fill-color:var(--ink)}
+.dodont{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.dodont .box{border:1px solid var(--hair);padding:18px}
+.dodont .do{border-left:3px solid var(--oxblood)}
+.dodont .dont{border-left:3px solid var(--silver)}
+.dodont h3{margin-bottom:8px;font-size:13px;text-transform:uppercase;letter-spacing:.08em}
+ul{margin:0;padding-left:18px}
+li{margin:4px 0}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <span class="label">On Record · Design System</span>
+  <h1 class="display" style="margin-top:12px">Design System</h1>
+  <p style="max-width:620px;color:var(--muted)">The web and marketing brand system for On Record. Austere and administrative by intent — the same register as the object. No shadows, no rounded corners, no gradients except the silver-foil wordmark. Restraint over embellishment.</p>
+
+  <hr class="rule">
+  <span class="sec-label">01 · Colour</span>
+  <div class="grid cols4">
+    <div class="sw"><div class="chip" style="background:#141414"></div><div class="meta"><div class="name">Ink</div><div class="hex">#141414</div></div></div>
+    <div class="sw"><div class="chip" style="background:#F1ECE1;border-bottom:1px solid #D7CFBE"></div><div class="meta"><div class="name">Bone</div><div class="hex">#F1ECE1</div></div></div>
+    <div class="sw"><div class="chip" style="background:#5C1014"></div><div class="meta"><div class="name">Oxblood</div><div class="hex">#5C1014</div></div></div>
+    <div class="sw"><div class="chip" style="background:#2E1214"></div><div class="meta"><div class="name">Maroon</div><div class="hex">#2E1214</div></div></div>
+    <div class="sw"><div class="chip" style="background:#A7AAB0"></div><div class="meta"><div class="name">Silver</div><div class="hex">#A7AAB0</div></div></div>
+    <div class="sw"><div class="chip" style="background:#E7E0D2"></div><div class="meta"><div class="name">Paper 2</div><div class="hex">#E7E0D2</div></div></div>
+    <div class="sw"><div class="chip" style="background:#D7CFBE"></div><div class="meta"><div class="name">Hairline</div><div class="hex">#D7CFBE</div></div></div>
+    <div class="sw"><div class="chip" style="background:#6E685F"></div><div class="meta"><div class="name">Muted</div><div class="hex">#6E685F</div></div></div>
+  </div>
+  <p style="color:var(--muted);font-size:13px;margin-top:16px">Oxblood is the primary accent (CTAs, links). Ink is text and dark surfaces. Bone is the paper. Maroon is hover/deep accent. The three cover colours — Ink (Man), Oxblood (Woman), Maroon (Common) — double as the brand palette.</p>
+
+  <hr class="rule">
+  <span class="sec-label">02 · Typography — IBM Plex Sans + Plex Mono</span>
+  <div class="type-row"><span class="spec">Display · 44/600</span><span class="display">Permanence changes behavior</span></div>
+  <div class="type-row"><span class="spec">H1 · 32/600</span><h1 style="margin:0">The Record</h1></div>
+  <div class="type-row"><span class="spec">H2 · 22/600</span><h2>Non-Negotiable Standards</h2></div>
+  <div class="type-row"><span class="spec">H3 · 17/600</span><h3>Today&rsquo;s single obligation</h3></div>
+  <div class="type-row"><span class="spec">Body · 16/400 · 1.6</span><span>It does not remind you. It does not encourage you. It records what you did.</span></div>
+  <div class="type-row"><span class="spec">Label · 12 mono · caps</span><span class="label">Day 001 / 090</span></div>
+  <p style="color:var(--muted);font-size:13px;margin-top:16px">Plex Mono is reserved for labels, counters, and "ledger" numerals — the administrative voice. One superfamily, no pairing gymnastics.</p>
+
+  <hr class="rule">
+  <span class="sec-label">03 · Buttons</span>
+  <div style="display:flex;gap:16px;flex-wrap:wrap;align-items:center">
+    <a class="btn btn--primary">Begin the record</a>
+    <a class="btn btn--ghost">Learn more</a>
+    <span style="background:#141414;padding:16px"><a class="btn btn--primary">On ink</a></span>
+  </div>
+  <p style="color:var(--muted);font-size:13px;margin-top:16px">Sharp corners, uppercase, tracked. Primary = oxblood; hover deepens to maroon. Ghost = ink outline. No shadows, ever.</p>
+
+  <hr class="rule">
+  <span class="sec-label">04 · Form fields — ruled, like the book</span>
+  <div class="field"><label>Name</label><input placeholder=""></div>
+  <div class="field"><label>Email</label><input placeholder=""></div>
+  <p style="color:var(--muted);font-size:13px">Inputs are a single hairline underline — the same ruled write-in line used inside the book. Focus turns the rule oxblood. No boxes, no fills.</p>
+
+  <hr class="rule">
+  <span class="sec-label">05 · Surfaces</span>
+  <div class="grid cols2">
+    <div class="card"><span class="label">Card · paper</span><h3 style="margin:8px 0">Hairline, no shadow</h3><p style="margin:0;color:var(--muted);font-size:14px">Raised surface on bone. 1px hairline border, flat.</p></div>
+    <div class="card card--ink"><span class="label" style="color:var(--silver)">Card · ink</span><h3 style="margin:8px 0">Dark surface</h3><p style="margin:0;color:var(--silver);font-size:14px">Ink background with silver labels.</p></div>
+  </div>
+
+  <hr class="rule">
+  <span class="sec-label">06 · Wordmark</span>
+  <div class="plate"><span class="wordmark">On Record</span></div>
+  <div style="padding:32px 0"><span class="wordmark wordmark--plain" style="font-size:34px;font-weight:600">On Record</span></div>
+  <p style="color:var(--muted);font-size:13px">On dark surfaces the wordmark carries a silver-foil treatment (the only permitted gradient). On light it is solid ink. Wordmark only — no tagline lockup.</p>
+
+  <hr class="rule">
+  <span class="sec-label">07 · Principles</span>
+  <div class="dodont">
+    <div class="box do"><h3>Do</h3><ul><li>Sharp corners, hairline rules, flat fills</li><li>Generous whitespace; let it breathe</li><li>Uppercase mono for labels & counters</li><li>Oxblood only where action matters</li></ul></div>
+    <div class="box dont"><h3>Don&rsquo;t</h3><ul><li>No drop shadows or rounded corners</li><li>No gradients (except the foil wordmark)</li><li>No stock imagery or icons-as-decoration</li><li>No exclamation-driven, &ldquo;delightful&rdquo; copy</li></ul></div>
+  </div>
+</div>
+</body>
+</html>
