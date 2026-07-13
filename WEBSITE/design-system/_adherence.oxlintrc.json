@@ -1,0 +1,224 @@
+{
+  "plugins": [
+    "react",
+    "import"
+  ],
+  "rules": {
+    "react/forbid-elements": [
+      "warn",
+      {
+        "forbid": []
+      }
+    ],
+    "no-restricted-imports": [
+      "warn",
+      {
+        "patterns": [
+          {
+            "group": [
+              "components/actions/**",
+              "components/brand/**",
+              "components/forms/**",
+              "components/surfaces/**",
+              "ui_kits/book-interior/**",
+              "ui_kits/website/**"
+            ],
+            "message": "Import design-system components from 'index.js', not component internals."
+          }
+        ]
+      }
+    ],
+    "no-restricted-syntax": [
+      "warn",
+      {
+        "selector": "Literal[value=/#[0-9a-fA-F]{3,8}\\b/]",
+        "message": "Raw hex color — use a design-system color token via var()."
+      },
+      {
+        "selector": "Literal[value=/\\b\\d+px\\b/]",
+        "message": "Raw px value — use a design-system spacing token via var()."
+      },
+      {
+        "selector": "Literal[value=/font-family\\s*:\\s*(?!['\\\"]?(?:IBM Plex Mono|IBM Plex Sans))/i]",
+        "message": "Font not provided by the design system. Available: IBM Plex Mono, IBM Plex Sans."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute > JSXIdentifier[name!=/^(?:variant|children|style|onClick|disabled|key|ref|className|style|children)$/]",
+        "message": "<Button> doesn't accept that prop. Declared props: variant, children, style, onClick, disabled."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute[name.name='variant'] > Literal[value!=/^(?:primary|ghost)$/]",
+        "message": "<Button> variant must be one of 'primary' | 'ghost'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Card'] > JSXAttribute > JSXIdentifier[name!=/^(?:variant|children|style|key|ref|className|style|children)$/]",
+        "message": "<Card> doesn't accept that prop. Declared props: variant, children, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Card'] > JSXAttribute[name.name='variant'] > Literal[value!=/^(?:paper|ink)$/]",
+        "message": "<Card> variant must be one of 'paper' | 'ink'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Field'] > JSXAttribute > JSXIdentifier[name!=/^(?:label|multiline|dark|placeholder|value|onChange|style|key|ref|className|style|children)$/]",
+        "message": "<Field> doesn't accept that prop. Declared props: label, multiline, dark, placeholder, value, onChange, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Label'] > JSXAttribute > JSXIdentifier[name!=/^(?:dark|children|style|key|ref|className|style|children)$/]",
+        "message": "<Label> doesn't accept that prop. Declared props: dark, children, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Wordmark'] > JSXAttribute > JSXIdentifier[name!=/^(?:edition|foil|size|style|key|ref|className|style|children)$/]",
+        "message": "<Wordmark> doesn't accept that prop. Declared props: edition, foil, size, style."
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/index.js"
+      ],
+      "rules": {
+        "no-restricted-imports": "off"
+      }
+    }
+  ],
+  "x-omelette": {
+    "components": {
+      "Button": {
+        "replaces": []
+      },
+      "Card": {
+        "replaces": []
+      },
+      "Field": {
+        "replaces": []
+      },
+      "Label": {
+        "replaces": []
+      },
+      "Wordmark": {
+        "replaces": []
+      }
+    },
+    "tokens": [
+      "--accent",
+      "--accent-hover",
+      "--font-body",
+      "--font-label",
+      "--line",
+      "--line-on-dark",
+      "--or-bone",
+      "--or-border",
+      "--or-cloth-black",
+      "--or-cloth-maroon",
+      "--or-cloth-oxblood",
+      "--or-foil",
+      "--or-font-mono",
+      "--or-font-sans",
+      "--or-fs-body",
+      "--or-fs-display",
+      "--or-fs-h1",
+      "--or-fs-h2",
+      "--or-fs-h3",
+      "--or-fs-label",
+      "--or-fs-small",
+      "--or-hairline",
+      "--or-hairline-d",
+      "--or-ink",
+      "--or-lh-body",
+      "--or-lh-display",
+      "--or-lh-h1",
+      "--or-lh-h2",
+      "--or-lh-h3",
+      "--or-lh-small",
+      "--or-maroon",
+      "--or-maxw",
+      "--or-muted",
+      "--or-oxblood",
+      "--or-paper-2",
+      "--or-radius",
+      "--or-s1",
+      "--or-s2",
+      "--or-s3",
+      "--or-s4",
+      "--or-s5",
+      "--or-s6",
+      "--or-s7",
+      "--or-s8",
+      "--or-s9",
+      "--or-silver",
+      "--or-track-label",
+      "--or-w-medium",
+      "--or-w-regular",
+      "--or-w-semi",
+      "--surface-card",
+      "--surface-dark",
+      "--surface-page",
+      "--text-body",
+      "--text-muted",
+      "--text-on-dark"
+    ],
+    "tokenKinds": {
+      "--or-ink": "color",
+      "--or-bone": "color",
+      "--or-paper-2": "color",
+      "--or-oxblood": "color",
+      "--or-maroon": "color",
+      "--or-silver": "color",
+      "--or-hairline": "color",
+      "--or-hairline-d": "color",
+      "--or-muted": "color",
+      "--or-cloth-black": "color",
+      "--or-cloth-oxblood": "color",
+      "--or-cloth-maroon": "color",
+      "--or-foil": "other",
+      "--text-body": "font",
+      "--text-muted": "font",
+      "--text-on-dark": "font",
+      "--surface-page": "color",
+      "--surface-card": "color",
+      "--surface-dark": "color",
+      "--accent": "color",
+      "--accent-hover": "color",
+      "--line": "color",
+      "--line-on-dark": "color",
+      "--or-font-sans": "font",
+      "--or-font-mono": "font",
+      "--or-fs-display": "spacing",
+      "--or-lh-display": "font",
+      "--or-fs-h1": "spacing",
+      "--or-lh-h1": "font",
+      "--or-fs-h2": "spacing",
+      "--or-lh-h2": "font",
+      "--or-fs-h3": "spacing",
+      "--or-lh-h3": "font",
+      "--or-fs-body": "spacing",
+      "--or-lh-body": "font",
+      "--or-fs-small": "spacing",
+      "--or-lh-small": "font",
+      "--or-fs-label": "spacing",
+      "--or-track-label": "spacing",
+      "--or-w-regular": "font",
+      "--or-w-medium": "font",
+      "--or-w-semi": "font",
+      "--font-body": "font",
+      "--font-label": "font",
+      "--or-s1": "spacing",
+      "--or-s2": "spacing",
+      "--or-s3": "spacing",
+      "--or-s4": "spacing",
+      "--or-s5": "spacing",
+      "--or-s6": "spacing",
+      "--or-s7": "spacing",
+      "--or-s8": "spacing",
+      "--or-s9": "spacing",
+      "--or-radius": "radius",
+      "--or-border": "spacing",
+      "--or-maxw": "spacing"
+    },
+    "fontFamilies": [
+      "IBM Plex Mono",
+      "IBM Plex Sans"
+    ]
+  }
+}
