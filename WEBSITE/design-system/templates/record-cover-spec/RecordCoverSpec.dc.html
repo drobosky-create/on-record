@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Record — Cover Spec" description="Cover production specification: cloth palette, silver foil wordmark, placement and materials" -->
+<helmet data-dc-atomics><meta name="design_doc_mode" content="canvas"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet"><style>body{margin:0;background:#eceae4;font-family:"IBM Plex Sans",system-ui,sans-serif}a{color:#1c1c1a}a:hover{color:#555}</style></helmet>
+
+<div style="padding:44px;display:flex;gap:48px;align-items:flex-start;flex-wrap:wrap">
+
+  <!-- Front cover, true size (140 × 210 mm @ 96 dpi) -->
+  <div style="display:flex;flex-direction:column;gap:10px">
+    <div style="font:500 11px 'IBM Plex Mono',monospace;color:#6b6a66">FRONT COVER · 140 × 210 MM · SHOWN 100%</div>
+    <div data-screen-label="Cover" style="position:relative;width:529px;height:794px;background:#161615;box-shadow:0 2px 14px rgba(20,20,19,0.25)">
+      <div style="position:absolute;left:0;right:0;bottom:83px;display:flex;justify-content:center">
+        <span style="font-size:16px;font-weight:500;letter-spacing:0.5em;text-indent:0.5em;line-height:1;background:linear-gradient(105deg,#9fa3a8 0%,#dfe2e6 45%,#a7abb0 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent">MAN ON RECORD</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stamping spec drawing -->
+  <div style="display:flex;flex-direction:column;gap:10px">
+    <div style="font:500 11px 'IBM Plex Mono',monospace;color:#6b6a66">FOIL STAMP · DIE POSITION</div>
+    <div style="position:relative;width:529px;height:794px;background:#f8f6f1;border:1px solid #c9c6bd">
+      <!-- vertical centreline -->
+      <div style="position:absolute;left:264px;top:0;bottom:0;width:0;border-left:1px dashed #b3552e;opacity:0.6"></div>
+      <div style="position:absolute;left:272px;top:12px;font:400 10px 'IBM Plex Mono',monospace;color:#b3552e">C/L — mark centred on trim width</div>
+      <!-- die outline -->
+      <div style="position:absolute;left:0;right:0;bottom:83px;display:flex;justify-content:center">
+        <span style="font-size:16px;font-weight:500;letter-spacing:0.5em;text-indent:0.5em;line-height:1;color:#1c1c1a;outline:1px dashed #b3552e;outline-offset:8px">MAN ON RECORD</span>
+      </div>
+      <!-- baseline dimension -->
+      <div style="position:absolute;left:60px;bottom:0;height:83px;width:0;border-left:1px solid #b3552e"></div>
+      <div style="position:absolute;left:36px;bottom:34px;font:400 10px 'IBM Plex Mono',monospace;color:#b3552e;background:#f8f6f1;padding:2px 4px">22 mm<br>baseline → trim foot</div>
+      <!-- cap height note -->
+      <div style="position:absolute;right:44px;bottom:120px;font:400 10px 'IBM Plex Mono',monospace;color:#b3552e;text-align:right">cap height 3 mm<br>tracking +500/1000 em<br>die ≈ 64 × 4 mm incl. tracking</div>
+    </div>
+  </div>
+
+  <!-- Written spec -->
+  <div style="width:400px;background:#f8f6f1;border:1px solid #c9c6bd;padding:28px 30px;box-sizing:border-box;display:flex;flex-direction:column;gap:0">
+    <div style="font-size:13px;font-weight:600;letter-spacing:0.1em;color:#1c1c1a">COVER — PRODUCTION SPEC</div>
+    <div style="height:1.5px;background:#1c1c1a;margin:12px 0 18px"></div>
+    <div style="display:grid;grid-template-columns:110px 1fr;gap:10px 14px;font-size:11px;line-height:1.55;color:#1c1c1a">
+      <div style="font-weight:600;letter-spacing:0.06em;font-size:9.5px;padding-top:1px">MATERIAL</div><div>Black book cloth (buckram), e.g. Arrestox B or Brillianta, black/near-black. No lamination, no printed image.</div>
+      <div style="font-weight:600;letter-spacing:0.06em;font-size:9.5px;padding-top:1px">MARK</div><div>"MAN ON RECORD" — IBM Plex Sans Medium, all caps, single line. The only text anywhere on the case. Spine and back board blank.</div>
+      <div style="font-weight:600;letter-spacing:0.06em;font-size:9.5px;padding-top:1px">FINISH</div><div>Silver foil stamp (matte silver, e.g. Kurz Luxor/Alufin matte — confirm on draw-down). Optionally registered with a blind emboss. No other foil or deboss.</div>
+      <div style="font-weight:600;letter-spacing:0.06em;font-size:9.5px;padding-top:1px">SIZE</div><div>Cap height 3 mm; tracking +500/1000 em; set width ≈ 64 mm. Die ≈ 64 × 4 mm, brass preferred for cloth.</div>
+      <div style="font-weight:600;letter-spacing:0.06em;font-size:9.5px;padding-top:1px">POSITION</div><div>Centred on trim width; baseline 22 mm above trim foot. Confirm optical position on the foil draw-down, not on screen — small marks drift low on dark cloth.</div>
+      <div style="font-weight:600;letter-spacing:0.06em;font-size:9.5px;padding-top:1px">PROOFING</div><div>Foil draw-down on the actual cloth, viewed in normal room light, before the die order is confirmed. Approve against the blank bound dummy.</div>
+    </div>
+  </div>
+
+</div>
+
+</x-dc>
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#1c1c1a"/><rect x="34" y="30" width="32" height="40" fill="none" stroke="#eceae4" stroke-width="2.5"/><line x1="40" y1="40" x2="60" y2="40" stroke="#eceae4" stroke-width="2"/><line x1="40" y1="48" x2="60" y2="48" stroke="#8a877f" stroke-width="1.5"/><line x1="40" y1="54" x2="60" y2="54" stroke="#8a877f" stroke-width="1.5"/></svg></template>
+</body>
+</html>
