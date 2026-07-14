@@ -24,7 +24,7 @@ Everything **shared across editions** lives at the top level and must never dive
 | [`CONTENT/`](CONTENT/) | The shared page copy — identical in every individual edition |
 | [`RECORD/`](RECORD/) | Shared production assets + the [design brief](RECORD/design-brief.md) |
 | [`PRINT/`](PRINT/) | Shared print specification, paper, vendors |
-| [`BUSINESS/`](BUSINESS/), [`OPA/`](OPA/), [`PACKAGING/`](PACKAGING/) | Business, go-to-market, packaging |
+| [`BUSINESS/`](BUSINESS/), [`OPA/`](OPA/), [`PACKAGING/`](PACKAGING/) | Business ([production plan & costing](BUSINESS/production-plan.md)), go-to-market ([marketing plan](OPA/marketing-plan.md), [journey to market](OPA/journey.md)), packaging |
 | [`FUTURE-TOOLS/`](FUTURE-TOOLS/), [`WEBSITE/`](WEBSITE/), [`APP/`](APP/) | Future surfaces |
 
 **Edition-specific differences** live under [`EDITIONS/`](EDITIONS/) — only the wordmark, cover, and (for The Common Record) the co-signed pages and reveal mechanic. Nothing that should stay common belongs there.
@@ -47,4 +47,4 @@ Every meaningful change is intentional, documented, and permanent — the same d
 
 ## Status
 
-`v0.3.3 — Concept`. On Record house established; three editions defined with cover palette (black / oxblood / dark maroon); Common Record set to 45 days with co-initiation; Close-Out added to every edition. Production spec at v0.2 (90-day individual runs, genuine lay-flat, cloth + silver foil). See [`decision-log.md`](decision-log.md) and [`ROADMAP.md`](ROADMAP.md).
+`v0.3.3 — Concept`. On Record house established; three editions defined with cover palette (black / oxblood / dark maroon); Common Record set to 45 days with co-initiation; Close-Out added to every edition. Production spec at v0.2 (90-day individual runs, genuine lay-flat, cloth + silver foil). Go-to-market and production plans adopted: staged runs (proofs → ~50 seed → ~250 preorder → ~1,000 production), retail band $95–$125, $5K launch budget, vendor avenues documented — start at [`OPA/journey.md`](OPA/journey.md). See [`decision-log.md`](decision-log.md) and [`ROADMAP.md`](ROADMAP.md).

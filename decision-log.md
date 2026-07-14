@@ -2,6 +2,14 @@
 
 A permanent record of the decisions behind On Record. Newest first.
 
+## v0.3.6 — Go-to-market and production plan adopted
+
+- **Staged path to market:** proofs → ~50-unit seed run → ~250-unit numbered preorder → ~1,000-unit production, each behind an explicit gate. One-page journey at `OPA/journey.md`; detail in `OPA/marketing-plan.md` and `BUSINESS/production-plan.md`.
+- **Retail band set at $95–$125, working anchor $115.** Full price everywhere; no discounts, no marketplaces — scarcity must be real.
+- **Launch marketing capped at $5,000 through preorder.** Seed-partner-led, founder-led organic, one photography/film investment. The object is the campaign.
+- **Vendor avenues documented by stage** (`PRINT/production-avenues.md`): Bookmobile lead candidate for the seed run; Hemlock vs. overseas offset head-to-head at preorder before committing production.
+- **Blocker recorded:** the pen spec (`PACKAGING/Pen/pen-spec.md`) must lock before the Stage 0 write test — the write test uses the shipped pen.
+
 ## v0.3.5 — Web/marketing design system
 
 - **Brand-core design system added** at `WEBSITE/design-system/` — the digital counterpart to the object's austerity (flat, hairline rules, sharp corners, oxblood only for action).
